@@ -1,4 +1,4 @@
-import './home.css';
+import './Home.css';
 import Bts from "./Bts";
 
 export default function Home() {
