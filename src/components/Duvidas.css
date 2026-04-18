@@ -1,0 +1,82 @@
+.duvidas {
+    width: 100%;
+    min-height: 350px;
+    background-image: url("/Duvidas.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* overlay escuro em toda a imagem */
+.duvidas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+/* conteúdo */
+.duvidas-overlay {
+    position: relative;
+    max-width: 900px;
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.duvidas-overlay h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: "Bakbak One", sans-serif;
+}
+
+.duvidas-overlay p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* botão */
+
+.btn {
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.btn i {
+    font-size: 18px;
+}
+
+.what {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "Montserrat", sans-serif;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+    .duvidas-overlay h2 {
+        font-size: 1.8rem;
+    }
+
+    .duvidas-overlay p {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,66 @@
+.marcas {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    overflow: hidden;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulo_marcas {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #001840;
+    font-family: "Bakbak One", sans-serif;
+    padding: 2%;
+}
+
+.marcas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.marca-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.marca-card img {
+    max-width: 140px;
+    max-height: 70px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.marca-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.marca-card:hover img {
+    filter: grayscale(0%);
+}
+
+.botao_marca {
+    margin-top: 20%;
+}
+
+@media (max-width: 768px) {
+    .botao_marca {
+        margin-top: 75%;
+    }
+}

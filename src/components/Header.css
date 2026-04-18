@@ -1,0 +1,120 @@
+/* Header.css */
+.header {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    top: 15px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1000;
+    position: absolute;
+
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 90px;
+    background-color: #001840;
+    border-radius: 30px;
+}
+
+.logo img {
+    max-height: 70px;
+    /* limita o tamanho */
+    width: 350px;
+    /* aumenta o tamanho */
+    object-fit: contain;
+}
+
+.logo {
+    margin-left: -100px;
+}
+
+/* Estilos do hambúrguer */
+.hamburger {
+    display: none;
+    /* Escondido por padrão (desktop) */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Navegação */
+.nav {
+    display: flex;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-list a:hover {
+    background-color: #2354a9;
+    border-radius: 10px;
+}
+
+/* Responsividade com hambúrguer */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        /* Mostra o hambúrguer no mobile */
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+        background-color: #001840;
+        border-radius: 30px;
+    }
+
+    .nav-open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        margin-bottom: 10px;
+        
+    }
+}
