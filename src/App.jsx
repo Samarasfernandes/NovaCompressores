@@ -8,6 +8,8 @@ import Duvidas from "./components/Duvidas";
 import Maquinas from "./components/Maquinas";
 import Footer from "./components/Footer";
 import Contatos from './pages/Contatos';
+import Cardcon from "./components/Cardcon";
+import Mapa from "./components/Mapa";
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
