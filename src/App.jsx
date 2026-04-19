@@ -7,22 +7,38 @@ import Marcas from "./components/Marcas";
 import Duvidas from "./components/Duvidas";
 import Maquinas from "./components/Maquinas";
 import Footer from "./components/Footer";
-import './App.css'
+import Contatos from './pages/Contatos';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
 
 function App() {
-
   return (
-  <>
- <Header />
-  <Home />
-  <Sobre />
-  <Servico />
-  <Marcas />
-  <Duvidas />
-  <Maquinas />
-  <Footer />
-  </>
-  )
+    <BrowserRouter>
+      
+      <Header />
+
+      <Routes>
+        {/* Página principal */}
+        <Route path="/" element={
+          <>
+            <Home />
+            <Sobre />
+            <Servico />
+            <Marcas />
+            <Duvidas />
+            <Maquinas />
+          </>
+        } />
+
+        {/* Página de contatos */}
+        <Route path="/contatos" element={<Contatos />} />
+      </Routes>
+
+      <Footer />
+
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
